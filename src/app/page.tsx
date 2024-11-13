@@ -1,101 +1,140 @@
-import Image from "next/image";
+// import component
+import WrapContainer from "./components/WrapContainer";
+import Search from "./components/Icons/Search";
+import CartPost from "./components/ShowPost/CartPost";
+import Flower from "./components/Flower/Flower";
+import ViewAll from "./components/viewAll/ViewAll";
+import RecipeHeader from "./components/RecipeHeader/RecipeHeader";
+import Recipe from "./pages/recipe";
+//icon import
+import { CiCircleRemove } from "react-icons/ci";
+// import pack next
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+// import library
+import clsx from "clsx";
+// import icons react
+import { FiGift } from "react-icons/fi";
+import { CiStar } from "react-icons/ci";
+import { IoIosStar } from "react-icons/io";
+// import image
+import img2 from "../../public/flower-2.png";
+import img3 from "../../public/flower-3.png";
+import img4 from "../../public/flower-4.png";
+
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+}
+const products: Product[] = [
+  { id: 1, name: "Dinner", image: "https://picsum.photos/200/300" },
+  { id: 2, name: "potato", image: "https://picsum.photos/200/301" },
+  { id: 3, name: "salad", image: "https://picsum.photos/200/302" },
+  { id: 4, name: "soup", image: "https://picsum.photos/200/303" },
+  { id: 5, name: "pasta", image: "https://picsum.photos/200/304" },
+  { id: 6, name: "salmon", image: "https://picsum.photos/200/305" },
+  { id: 7, name: "shrimp", image: "https://picsum.photos/200/306" },
+  { id: 8, name: "Nodule", image: "https://picsum.photos/200/307" }
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+    <>
+      <WrapContainer className="">
+        <section className="mx-6">
+          <div className="content-container">
+            <h1 className="text-slate-900 motion-preset-rebound-down motion-delay-[1100ms]  be-vietnam-pro-bold text-[2rem] uppercase font-bold text-center mt-[30px] mb-[20px]">
+              Công thức
+            </h1>
+            <div className="search-recipe motion-preset-rebound-down motion-delay-[1200ms] lg:mx-[200px]">
+              <div className="flex items-center border border-slate-500/30 hover:border-slate-500 duration-200 transition-all px-4">
+                <form action="#" className="w-3/4">
+                  <input
+                    type="text"
+                    placeholder="Search recipe ..."
+                    className="italic w-full text-slate-500 p-2 outline-none border-none"
+                  />
+                </form>
+                <div className="w-1/4 flex items-center justify-end">
+                  <Search className=" cursor-pointer hover:text-slate-900 text-slate-500 text-[24px] mr-10" />
+                  <CiCircleRemove className=" cursor-pointer hover:text-slate-900 text-slate-500 text-[24px]" />
+                </div>
+              </div>
+            </div>
+            <div className="list_recipes mt-10">
+              <div
+                className={clsx(
+                  "overflow-scroll lg:overflow-hidden scroll-smooth mb-6 -mx-[16px] w-[100% + 32px]"
+                )}
+              >
+                <ul className="flex items-center lg:justify-center pb-[16px] br-[16px]">
+                  {products.map((item, index) => {
+                    return (
+                      <li
+                        className="pr-6 motion-preset-rebound-down motion-delay-[1400ms]"
+                        key={index}
+                      >
+                        <Link href="#" className="block">
+                          <div className="w-[100px] h-[100px] rounded-full overflow-hidden">
+                            <img
+                              src={item.image}
+                              className="w-full hover:scale-110 duration-300 transition-all  object-cover"
+                            />
+                          </div>
+                          <p className="text-slate-500 text-[18px] text-center capitalize hover:text-slate-900 duration-300 transition-all mt-3 text-sm">
+                            {item.name}
+                          </p>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* video introduction */}
+        <section className="content-container px-[16px] mt-10">
+          <div className="motion-preset-rebound-down motion-delay-[1500ms]  text-center mb-5 text-slate-500 text-[20px]">
+            Featured Recipe
+          </div>
+          <Flower
+            image={img2}
+            className="motion-preset-rebound-down motion-delay-[1600ms]"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="video lg:flex lg:items-start mt-5 lg:mt-8">
+            <div className="lg:order-2 lg:ml-5 lg:w-7/12">
+              <video
+                loop={true}
+                autoPlay={true}
+                src="/video.mp4"
+                className="mb-6 motion-preset-rebound-down motion-delay-[1800ms]"
+              ></video>
+            </div>
+            <div className="lg:order-1 lg:mr-5 lg:w-5/12 lg:text-left">
+              <h2 className="motion-preset-slide-right motion-duration-500 motion-delay-[2000ms]  video-heading lg:text-left text-center text-slate-800 text-[1.5rem]">
+                Epic Snickerdoodles From Jessie Sheehan
+              </h2>
+              <p className="motion-preset-slide-right motion-duration-500 motion-delay-[2000ms]  video-description lg:text-left  text-[1.2rem] mt-4 text-center leading-[2rem] text-slate-600">
+                These snickerdoodles from Jessie Sheehan are slightly puffy,
+                soft-middled, crispy-edged, and delish!
+              </p>
+              <Link
+                href="#"
+                className="lg:order-3 order-4 lg:col-start-1  lg:flex-none lg:justify-start flex justify-center mt-10 "
+              >
+                <button className="motion-preset-rebound-down motion-delay-[2200ms] px-[20px] capitalize  py-[8px] text-[1.4rem] font-thin bg-amber-700/60 hover:bg-amber-700 duration-300 transition-all text-white ">
+                  view recipe
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* list post recipe */}
+        <Flower image={img3} className="pt-10 motion-preset-rebound-down motion-delay-[2300ms]" />
+        <Recipe />
+      </WrapContainer>
+    </>
   );
 }
