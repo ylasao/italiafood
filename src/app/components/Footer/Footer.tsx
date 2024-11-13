@@ -15,8 +15,8 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer mt-10 bg-yellow-500 ">
-      <WrapContainer className="">
+    <footer className="footer mt-10  bg-yellow-500 ">
+      <WrapContainer className="p-2">
         <div className="footer-container grid grid-cols-1 lg:grid-cols-2 py-[100px]">
           <div className="footer-nav order-2 lg:order-1">
             <div className="wrap-nav lg:flex lg:items-start lg:justify-between">
@@ -27,7 +27,7 @@ const Footer = () => {
                   "Podcast",
                   "Network",
                   "Event",
-                  "Communicate",
+                  "Communicate"
                 ]}
               />
               <ToggleContent
@@ -37,7 +37,7 @@ const Footer = () => {
                   "Register",
                   "Food",
                   "Order",
-                  "Communicate",
+                  "Communicate"
                 ]}
               />
               <ToggleContent

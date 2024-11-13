@@ -10,119 +10,115 @@ import { MdOutlineEditNote } from "react-icons/md";
 import "@/app/globals.css";
 const Page = () => {
   return (
-    <section
-      className="pt-5 be-vietnam-pro-regular h-[100vh] gradient-animation "
-      //   style={{ backgroundImage: `url(${background.src})` }}
-    >
-      <WrapContainer className="">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-          <div className="md:col-span-9 m-auto">
-            <div className="">
-              <Goback />
-              <div className="nameVideo">
-                <h2 className="text-semibold text-slate-700   text-[1rem] md:text-[1.3rem] my-4">
-                  Lorem ipsum dolor sit amet text-slate-500 consectetur,
-                  adipisicing elit. Earum optio error, aspernatur laborum
-                </h2>
-              </div>
-              <div className="wrap-video">
-                <video
-                  muted
-                  controls
-                  autoPlay={true}
-                  src="/video.mp4"
-                  className="mb-6 rounded-lg motion-preset-compress "
-                ></video>
-              </div>
+    <WrapContainer className="">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
+        <div className="md:col-span-9 p-2 m-auto">
+          <div className="">
+            <Goback />
+            <div className="nameVideo">
+              <h2 className="font-bold text-black/70 motion-preset-slide-right motion-duration-300  text-[1.2rem] md:text-[1.3rem] my-4">
+                Lorem ipsum dolor sit amet text-slate-500 consectetur
+              </h2>
+            </div>
+            <div className="wrap-video">
+              <video
+                muted
+                controls
+                autoPlay={true}
+                src="/video.mp4"
+                className="mb-6 rounded-lg motion-preset-compress "
+              ></video>
+            </div>
 
-              <div className="description mt-5">
-                <h2 className="text-yellow-500">Description</h2>
-                <p className="text-slate-500/70 py-4 motion-preset-slide-right ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatem corporis quisquam fuga, eius impedit delectus non
-                  cumque nostrum totam eveniet id perspiciatis nemo corrupti vel
-                  ipsam illo excepturi amet iure!
+            <div className="description mt-5">
+              <h2 className="text-yellow-600 font-bold">Description</h2>
+              <p className="text-slate-500/70 py-4 motion-preset-slide-right ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem corporis quisquam fuga, eius impedit delectus non
+                cumque nostrum totam eveniet id perspiciatis nemo corrupti vel
+                ipsam illo excepturi amet iure!
+              </p>
+              <p className="text-slate-500/70 motion-preset-slide-right ">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid iusto beatae aut dolorem quis facere autem. Eveniet
+                eaque vitae reiciendis ipsam at fuga eum? Blanditiis aliquid
+                laboriosam dolor ab quidem.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="md:col-span-3">
+          <div className="note p-2 rounded-lg mb-2">
+            <div className=" rounded-lg border-solid border-1 border-slate-500 p-2">
+              <h2 className="text-yellow-600 font-bold p-2 text-center rounded-md capitalize ">
+                Note anything
+              </h2>
+              <div className="mt-4 flex items-center justify-between">
+                <p className="capitalize text-sm text-slate-500 font-bold">
+                  NOTE
                 </p>
-                <p className="text-slate-500/70 motion-preset-slide-right ">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Aliquid iusto beatae aut dolorem quis facere autem. Eveniet
-                  eaque vitae reiciendis ipsam at fuga eum? Blanditiis aliquid
-                  laboriosam dolor ab quidem.
-                </p>
+                <MdOutlineEditNote className="text-slate-500 text-[1.3rem]" />
+              </div>
+              <div className="mt-4  motion-preset-slide-right ">
+                <ul>
+                  <li className="border-b border-dashed border-b-slate-400 text-slate-400 py-2">
+                    Thong tin cua ban
+                  </li>
+                  <li className="border-b border-dashed border-b-slate-400 text-slate-400 py-2">
+                    Thong tin cua ban
+                  </li>
+                  <li className="border-b border-dashed border-b-slate-400 text-slate-400 py-2">
+                    Thong tin cua ban
+                  </li>
+                  <li className="border-b border-dashed border-b-slate-400 text-slate-400 py-2">
+                    Thong tin cua ban
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div className="md:col-span-3">
-            <div className="note p-2 rounded-lg mb-2">
-              <div className=" rounded-lg border-solid border-1 border-slate-500 p-2">
-                <h2 className="text-yellow-600 text-sm p-2 text-center rounded-md capitalize ">
-                  Note anything
-                </h2>
-                <div className="mt-4 flex items-center justify-between">
-                  <p className="capitalize text-sm text-slate-500 ">NOTE</p>
-                  <MdOutlineEditNote className="text-slate-500 text-[1.3rem]" />
+          <div className=" p-2 rounded-lg ">
+            <h2 className=" text-[16px] text-yellow-600  font-bold p-2 text-center rounded-md capitalize ">
+              Suggest
+            </h2>
+            <div className=" rounded-lg p-2  ">
+              <div className="flex mb-3 items-start">
+                <div className="wrap-video w-1/3">
+                  <Image className="rounded-lg" src={img2} alt="" />
                 </div>
-                <div className="mt-4  motion-preset-slide-right ">
-                  <ul>
-                    <li className="border-b border-dashed border-b-blue-950 text-blue-950 py-2">
-                      Thong tin cua ban
-                    </li>
-                    <li className="border-b border-dashed border-b-blue-950 text-blue-950 py-2">
-                      Thong tin cua ban
-                    </li>
-                    <li className="border-b border-dashed border-b-blue-950 text-blue-950 py-2">
-                      Thong tin cua ban
-                    </li>
-                    <li className="border-b border-dashed border-b-blue-950 text-blue-950 py-2">
-                      Thong tin cua ban
-                    </li>
-                  </ul>
+                <div className="content w-2/3">
+                  <h2 className="text-sm text-slate-500  capitalize  ml-3">
+                    Earum optio error, aspernatur laborum
+                  </h2>
                 </div>
               </div>
-            </div>
-            <div className=" p-2 rounded-lg motion-preset-slide-right ">
-              <h2 className=" text-[16px] text-yellow-500  p-2 text-center rounded-md capitalize ">
-                Suggest
-              </h2>
-              <div className=" rounded-lg p-2  ">
-                <div className="flex mb-3 items-start">
-                  <div className="wrap-video w-1/3">
-                    <Image className="rounded-lg" src={img2} alt="" />
-                  </div>
-                  <div className="content w-2/3">
-                    <h2 className="text-sm text-slate-500  capitalize  ml-3">
-                      Earum optio error, aspernatur laborum
-                    </h2>
-                  </div>
+              <div className="flex mb-3 items-start">
+                <div className="wrap-video w-1/3">
+                  <Image className="rounded-lg" src={img2} alt="" />
                 </div>
-                <div className="flex mb-3 items-start">
-                  <div className="wrap-video w-1/3">
-                    <Image className="rounded-lg" src={img2} alt="" />
-                  </div>
-                  <div className="content w-2/3">
-                    <h2 className="text-sm text-slate-500  capitalize  ml-3">
-                      Earum optio error, aspernatur laborum
-                    </h2>
-                  </div>
+                <div className="content w-2/3">
+                  <h2 className="text-sm text-slate-500  capitalize  ml-3">
+                    Earum optio error, aspernatur laborum
+                  </h2>
                 </div>
-                <div className="flex mb-3 items-start">
-                  <div className="wrap-video w-1/3">
-                    <Image className="rounded-lg" src={img2} alt="" />
-                    <div className=""></div>
-                  </div>
+              </div>
+              <div className="flex mb-3 items-start">
+                <div className="wrap-video w-1/3">
+                  <Image className="rounded-lg" src={img2} alt="" />
+                  <div className=""></div>
+                </div>
 
-                  <div className="content w-2/3">
-                    <h2 className="text-sm text-slate-500  capitalize  ml-3">
-                      Earum optio error, aspernatur laborum
-                    </h2>
-                  </div>
+                <div className="content w-2/3">
+                  <h2 className="text-sm text-slate-500  capitalize  ml-3">
+                    Earum optio error, aspernatur laborum
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </WrapContainer>
-    </section>
+      </div>
+    </WrapContainer>
   );
 };
 

@@ -13,12 +13,12 @@ const Login = ({ handle }: { handle: boolean }) => {
     <>
       {openCreateAccount && (
         <div className=" popup_login fixed w-full h-full z-[100] overflow-auto top-0 left-0  bg-slate-300/50 ">
-          <div className="bg-white relative shadow-slate-300/80 shadow-md h-[660px] w-[900px] mx-auto my-[15%]   z-[100] motion-scale-in-[0.25] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
-            <div className="form grid lg:grid-cols-2 p-[50px]">
+          <div className="bg-white relative shadow-slate-300/80 shadow-md lg:h-[660px]  lg:w-[900px]  w-[400px] mx-auto my-[15%] z-[100] motion-scale-in-[0.25] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
+            <div className="form grid lg:grid-cols-2 grid-cols-1 p-[50px]">
               {openLogin === true ? (
                 <>
-                  <div className="flex mt-[150px] justify-center">
-                    <div className="">
+                  <div className="flex mt-[30px] lg:mt-[150px] justify-center">
+                    <div className="hidden lg:block">
                       <h2 className="text-blue-950 py-4 text-[24px] font-semibold">
                         Create account
                       </h2>
@@ -35,7 +35,7 @@ const Login = ({ handle }: { handle: boolean }) => {
                       />
                     </div>
                   </div>
-                  <div className="flex mt-[50px] justify-center">
+                  <div className="flex mt-10 lg:mt-[50px] justify-center">
                     <div className="">
                       <h2 className="text-blue-950 py-4 text-[24px] font-semibold">
                         Log in
@@ -83,7 +83,7 @@ const Login = ({ handle }: { handle: boolean }) => {
                 </>
               ) : (
                 <>
-                  <div className="mt-10 pr-[50px] border-r border-r-slate-300">
+                  <div className="mt-10  lg:pr-[50px] lg:border-r lg:border-r-slate-300">
                     <h2 className="text-blue-950 py-4 text-[24px] font-semibold">
                       Create an Account
                     </h2>
@@ -91,20 +91,20 @@ const Login = ({ handle }: { handle: boolean }) => {
                       Unlock access to The Table rewards for first dibs on sales
                       & new arrivals—plus, 20 points on us!
                     </p>
-                    <ol className="block mt-5">
-                      <li className="my-2 text-[15px]  text-slate-500">
+                    <ol className=" hidden lg:block mt-5">
+                      <li className="my-2 text-[13px] lg:text-[15px]  text-slate-500">
                         Join The Table for member-only rewards
                       </li>
-                      <li className="my-2 text-[15px]  text-slate-500">
+                      <li className="my-2 text-[13px] lg:text-[15px]  text-slate-500">
                         View and save thousands of recipes
                       </li>
-                      <li className="my-2 text-[15px]  text-slate-500">
+                      <li className="my-2 text-[13px] lg:text-[15px]  text-slate-500">
                         Submit and review recipes
                       </li>
-                      <li className="my-2 text-[15px]  text-slate-500">
+                      <li className="my-2 text-[13px] lg:text-[15px]  text-slate-500">
                         Get exclusive offers and rewards
                       </li>
-                      <li className="my-2 text-[15px]  text-slate-500">
+                      <li className="my-2 text-[13px] lg:text-[15px]  text-slate-500">
                         Receive early access to new arrivals
                       </li>
                     </ol>
@@ -126,9 +126,9 @@ const Login = ({ handle }: { handle: boolean }) => {
                       />
                     </form>
                   </div>
-                  <div className="flex mt-[150px] justify-center">
+                  <div className="  mt-8 lg:mt-[150px] lg:flex justify-center">
                     <div className="">
-                      <h2 className="text-blue-950 py-4 text-[24px] font-semibold">
+                      <h2 className="text-blue-950 hidden lg:block lg:py-4 text-[24px] font-semibold">
                         Log in
                       </h2>
                       <p className="text-slate-500 text-[14px]">

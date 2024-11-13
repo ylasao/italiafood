@@ -9,7 +9,7 @@ const Goback = () => {
   return (
     <button
       onClick={handleBack}
-      className="flex items-center motion-preset-confetti text-yellow-600 underline my-5"
+      className="flex items-center px-5 font-bold motion-preset-confetti text-yellow-600  my-5"
     >
       <IoReturnDownBack className="text-[1.3rem] mr-2" />
       <span>go back</span>

@@ -32,7 +32,7 @@ const PostId = async ({ params }: { params: { postId: string } }) => {
       <WrapContainer>
         {/* image flower */}
         <Goback />
-        <div className="header">
+        <div className="header hidden lg:block">
           <Flower image={img4} className="mt-6" />
         </div>
         <div>

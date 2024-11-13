@@ -50,7 +50,7 @@ const Header = () => {
             </ul>
           </div>
           <div className="lg:order-2 motion-preset-rebound-down motion-delay-[800ms] order-1 lg:col-start-5  lg:ml-20 lg:text-center lg:col-span-3 nameBrand capitalize col-start-1 col-end-3 text-yellow-600 font-bold text-[1.8rem]">
-            Ý & Bếp
+            italia
           </div>
           {/* <div className="lg:order-3 order-3 lg:col-start-8  lg:ml-auto lg:mr-10  mx-10 lg:col-span-3 search col-start-1 col-end-7 mt-3 lg:mt-0">
             <div className="flex justify-between border border-slate-500/30 hover:border-yellow-600   duration-200 transition-all p-2 rounded-3xl">
@@ -64,8 +64,8 @@ const Header = () => {
               </button>
             </div>
           </div> */}
-          <div className="lg:order-4 order-2 uppercase lg:col-start-11 lg:col-span-2 col-start-5 col-end-7">
-            <div className="flex items-center justify-end"> 
+          <div className="lg:order-4 order-2 uppercase lg:col-start-11 lg:col-span-2 col-start-5 col-end-7 motion-preset-rebound-down motion-delay-[1000ms]">
+            <div className="flex items-center justify-end">
               <JoinNow />
               <div className="ml-4 text-slate-600 lg:text-sm lg:font-semibold   text-sm hover:cursor-pointer cart">
                 <Link href="#">Cart</Link>

@@ -40,10 +40,10 @@ const ListVideo = () => {
                       Play
                     </span>
                   </div>
-                  <div className="border rounded-full border-slate-500 p-2 m-2 shadow-slate-500 hover:border-white group/btn duration-300 transition-all shadow">
+                  <div className="hidden lg:block border rounded-full border-slate-500 p-2 m-2 shadow-slate-500 hover:border-white group/btn duration-300 transition-all shadow">
                     <FaPlus className="lg:w-5 lg:h-5 w-3 h-3 text-slate-500 group-hover/btn:text-white duration-300 transition-all  m-2" />
                   </div>
-                  <div className="div border flex items-center rounded-full border-slate-500 p-2 m-2 shadow-slate-500 hover:border-white group/btn duration-300 transition-all shadow">
+                  <div className="hidden lg:block div border flex items-center rounded-full border-slate-500 p-2 m-2 shadow-slate-500 hover:border-white group/btn duration-300 transition-all shadow">
                     <AiFillLike className="lg:w-5 lg:h-5 w-3 h-3 text-slate-500 group-hover/btn:text-white duration-300 transition-all  m-2" />
                     <span className="text-slate-500 duration-300 transition group-hover/btn:text-white group-hover/btn:block hidden group-hover/btn:opacity-100 opacity-0">
                       Thích
